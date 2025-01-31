@@ -505,16 +505,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// rcpp_hello_world
-List rcpp_hello_world();
-RcppExport SEXP _GBMDSpackage_rcpp_hello_world() {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpp_hello_world());
-    return rcpp_result_gen;
-END_RCPP
-}
 // reference_d_x_cpp
 // Calculate the density of x arma::vec reference_d_x_cpp(arma::mat x, arma::mat prev_x);
 RcppExport SEXP _GBMDSpackage_reference_d_x_cpp(SEXP xSEXP, SEXP prev_xSEXP) {
@@ -599,7 +589,6 @@ static const R_CallMethodDef CallEntries[] = {
     {"_GBMDSpackage_psnorm_cpp", (DL_FUNC) &_GBMDSpackage_psnorm_cpp, 4},
     {"_GBMDSpackage_rCESSFun_cpp", (DL_FUNC) &_GBMDSpackage_rCESSFun_cpp, 4},
     {"_GBMDSpackage_rESSFun_cpp", (DL_FUNC) &_GBMDSpackage_rESSFun_cpp, 1},
-    {"_GBMDSpackage_rcpp_hello_world", (DL_FUNC) &_GBMDSpackage_rcpp_hello_world, 0},
     {"_GBMDSpackage_reference_d_x_cpp", (DL_FUNC) &_GBMDSpackage_reference_d_x_cpp, 2},
     {"_GBMDSpackage_reference_d_x_cpp", (DL_FUNC) &_GBMDSpackage_reference_d_x_cpp, 2},
     {"_GBMDSpackage_rmvnorm_arma", (DL_FUNC) &_GBMDSpackage_rmvnorm_arma, 3},

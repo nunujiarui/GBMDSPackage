@@ -133,10 +133,6 @@ rESSFun_cpp <- function(logW) {
     .Call(`_GBMDSpackage_rESSFun_cpp`, logW)
 }
 
-rcpp_hello_world <- function() {
-    .Call(`_GBMDSpackage_rcpp_hello_world`)
-}
-
 reference_d_x_cpp <- function(x, prev_x) {
     .Call(`_GBMDSpackage_reference_d_x_cpp`, x, prev_x)
 }
