@@ -35,4 +35,4 @@ Imports: cluster,
     tidytext,
     truncnorm,
     vegan
-LinkingTo: Rcpp
+LinkingTo: Rcpp, RcppArmadillo
