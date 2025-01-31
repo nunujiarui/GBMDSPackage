@@ -5,7 +5,7 @@ Title: What the Package Does in One 'Title
 Version: 1.0
 Date: 2025-01-27
 Author: Erin Zhang
-Maintainer: jiaruiz@sfu.ca
+Maintainer: Erin Zhang <jiaruiz@sfu.ca>
 Description: One paragraph description of
      what the package does as one or more
      full sentences.
