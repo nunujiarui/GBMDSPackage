@@ -1,8 +1,8 @@
 #include <RcppArmadillo.h>
-// [[Rcpp::depends(RcppArmadillo)]]
 
 using namespace Rcpp;
 using namespace arma;
+// [[Rcpp::depends(RcppArmadillo)]]
 
 /*
  The three functions below, cholesky_tridiagonal, forward_algorithm, 

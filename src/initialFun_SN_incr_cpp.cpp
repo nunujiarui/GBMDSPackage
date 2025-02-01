@@ -1,9 +1,10 @@
 #include <RcppArmadillo.h>
-// [[Rcpp::depends(RcppArmadillo)]]
 #include "reference_d_x_initial_cpp.h"
 #include "rmvnorm_arma.h"
 #include "distRcpp.h"
 #include "SSRFun_cpp.h"
+using namespace arma;
+// [[Rcpp::depends(RcppArmadillo)]]
 using namespace Rcpp;
 // [[Rcpp::export]]
 

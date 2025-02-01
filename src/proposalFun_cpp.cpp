@@ -1,5 +1,4 @@
 #include <RcppArmadillo.h>
-// [[Rcpp::depends(RcppArmadillo)]]
 #include "rmvnorm_arma.h"
 #include "distRcpp.h"
 #include "SSRFun_cpp.h"
@@ -8,6 +7,8 @@
 #include "likelihoodFun_cpp.h"
 //#include "dproposalFun_cpp.h"
 #include "logReferenceRatio_cpp.h"
+using namespace arma;
+// [[Rcpp::depends(RcppArmadillo)]]
 using namespace Rcpp;
 // [[Rcpp::export]]
 

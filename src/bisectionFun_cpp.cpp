@@ -1,7 +1,8 @@
 #include <RcppArmadillo.h>
 #include <iostream>
-// [[Rcpp::depends(RcppArmadillo)]]
 #include "rCESSFun_cpp.h"
+using namespace arma;
+// [[Rcpp::depends(RcppArmadillo)]]
 using namespace Rcpp;
 
 // [[Rcpp::export]]

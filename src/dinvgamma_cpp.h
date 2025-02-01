@@ -1,5 +1,6 @@
-#include <Rcpp.h>
 using namespace Rcpp;
+using namespace arma;
+// [[Rcpp::depends(RcppArmadillo)]]
 
 // [[Rcpp::export]]
 Rcpp::NumericVector dinvgamma_cpp(Rcpp::NumericVector x,

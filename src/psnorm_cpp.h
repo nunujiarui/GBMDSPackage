@@ -1,4 +1,6 @@
 #include <Rcpp.h>
+using namespace arma;
+// [[Rcpp::depends(RcppArmadillo)]]
 using namespace Rcpp;
 
 

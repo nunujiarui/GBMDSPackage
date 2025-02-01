@@ -1,5 +1,7 @@
 #include <Rcpp.h>
 using namespace Rcpp;
+using namespace arma;
+// [[Rcpp::depends(RcppArmadillo)]]
 
 // This is a simple example of exporting a C++ function to R. You can
 // source this function into an R session using the Rcpp::sourceCpp 

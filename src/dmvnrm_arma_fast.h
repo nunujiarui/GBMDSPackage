@@ -1,5 +1,6 @@
-// [[Rcpp::depends("RcppArmadillo")]]
 #include <RcppArmadillo.h>
+using namespace arma;
+// [[Rcpp::depends(RcppArmadillo)]]
 
 static double const log2pi = std::log(2.0 * M_PI);
 
