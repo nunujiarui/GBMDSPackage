@@ -3,6 +3,7 @@
 
 #include <RcppArmadillo.h>
 #include <Rcpp.h>
+#include <SSRFun_cpp.h>
 
 using namespace Rcpp;
 
