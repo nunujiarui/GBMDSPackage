@@ -5,8 +5,6 @@
 #include <Rcpp.h>
 #include "bisectionFun_cpp.h"
 #include "dproposalFun_cpp.h"
-#include "distRcpp.h"
-#include "dinvgamma_cpp.h"
 #include "dmvnrm_arma_fast.h"
 #include "likelihoodFun_cpp.h"
 #include "likelihoodFun_SN_cpp.h"
