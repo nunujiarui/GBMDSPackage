@@ -40,21 +40,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// bisectionFun_cpp
-// Calculate the next annealing parameter  double bisectionFun_cpp(double low, double high, arma::vec W, arma::vec logL, double phi);
-RcppExport SEXP _GBMDSpackage_bisectionFun_cpp(SEXP lowSEXP, SEXP highSEXP, SEXP WSEXP, SEXP logLSEXP, SEXP phiSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< double >::type low(lowSEXP);
-    Rcpp::traits::input_parameter< double >::type high(highSEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type W(WSEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type logL(logLSEXP);
-    Rcpp::traits::input_parameter< double >::type phi(phiSEXP);
-    rcpp_result_gen = Rcpp::wrap(bisectionFun_cpp(low, high, W, logL, phi));
-    return rcpp_result_gen;
-END_RCPP
-}
 // dinvgamma_cpp
 Rcpp::NumericVector dinvgamma_cpp(Rcpp::NumericVector x, double shape, double rate, bool log);
 RcppExport SEXP _GBMDSpackage_dinvgamma_cpp(SEXP xSEXP, SEXP shapeSEXP, SEXP rateSEXP, SEXP logSEXP) {
@@ -66,20 +51,6 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< double >::type rate(rateSEXP);
     Rcpp::traits::input_parameter< bool >::type log(logSEXP);
     rcpp_result_gen = Rcpp::wrap(dinvgamma_cpp(x, shape, rate, log));
-    return rcpp_result_gen;
-END_RCPP
-}
-// dmvnrm_arma_fast
-arma::vec dmvnrm_arma_fast(arma::mat const& x, arma::rowvec const& mean, arma::mat const& sigma, bool const logd);
-RcppExport SEXP _GBMDSpackage_dmvnrm_arma_fast(SEXP xSEXP, SEXP meanSEXP, SEXP sigmaSEXP, SEXP logdSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat const& >::type x(xSEXP);
-    Rcpp::traits::input_parameter< arma::rowvec const& >::type mean(meanSEXP);
-    Rcpp::traits::input_parameter< arma::mat const& >::type sigma(sigmaSEXP);
-    Rcpp::traits::input_parameter< bool const >::type logd(logdSEXP);
-    rcpp_result_gen = Rcpp::wrap(dmvnrm_arma_fast(x, mean, sigma, logd));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -458,18 +429,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// reference_d_x_cpp
-// Calculate the density of x arma::vec reference_d_x_cpp(arma::mat x, arma::mat prev_x);
-RcppExport SEXP _GBMDSpackage_reference_d_x_cpp(SEXP xSEXP, SEXP prev_xSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type x(xSEXP);
-    Rcpp::traits::input_parameter< arma::mat >::type prev_x(prev_xSEXP);
-    rcpp_result_gen = Rcpp::wrap(reference_d_x_cpp(x, prev_x));
-    return rcpp_result_gen;
-END_RCPP
-}
 // rmvnorm_arma
 arma::mat rmvnorm_arma(int n, arma::vec mu, arma::mat sigma);
 RcppExport SEXP _GBMDSpackage_rmvnorm_arma(SEXP nSEXP, SEXP muSEXP, SEXP sigmaSEXP) {
@@ -499,9 +458,7 @@ END_RCPP
 static const R_CallMethodDef CallEntries[] = {
     {"_GBMDSpackage_SSRFun_cpp", (DL_FUNC) &_GBMDSpackage_SSRFun_cpp, 2},
     {"_GBMDSpackage_bisectionFun_cpp", (DL_FUNC) &_GBMDSpackage_bisectionFun_cpp, 5},
-    {"_GBMDSpackage_bisectionFun_cpp", (DL_FUNC) &_GBMDSpackage_bisectionFun_cpp, 5},
     {"_GBMDSpackage_dinvgamma_cpp", (DL_FUNC) &_GBMDSpackage_dinvgamma_cpp, 4},
-    {"_GBMDSpackage_dmvnrm_arma_fast", (DL_FUNC) &_GBMDSpackage_dmvnrm_arma_fast, 4},
     {"_GBMDSpackage_dmvnrm_arma_fast", (DL_FUNC) &_GBMDSpackage_dmvnrm_arma_fast, 4},
     {"_GBMDSpackage_dproposalFun_cpp", (DL_FUNC) &_GBMDSpackage_dproposalFun_cpp, 5},
     {"_GBMDSpackage_initialFun_SN_cpp", (DL_FUNC) &_GBMDSpackage_initialFun_SN_cpp, 4},
@@ -526,7 +483,6 @@ static const R_CallMethodDef CallEntries[] = {
     {"_GBMDSpackage_psnorm_cpp", (DL_FUNC) &_GBMDSpackage_psnorm_cpp, 4},
     {"_GBMDSpackage_rCESSFun_cpp", (DL_FUNC) &_GBMDSpackage_rCESSFun_cpp, 4},
     {"_GBMDSpackage_rESSFun_cpp", (DL_FUNC) &_GBMDSpackage_rESSFun_cpp, 1},
-    {"_GBMDSpackage_reference_d_x_cpp", (DL_FUNC) &_GBMDSpackage_reference_d_x_cpp, 2},
     {"_GBMDSpackage_reference_d_x_cpp", (DL_FUNC) &_GBMDSpackage_reference_d_x_cpp, 2},
     {"_GBMDSpackage_rmvnorm_arma", (DL_FUNC) &_GBMDSpackage_rmvnorm_arma, 3},
     {"_GBMDSpackage_stressFun_cpp", (DL_FUNC) &_GBMDSpackage_stressFun_cpp, 2},
