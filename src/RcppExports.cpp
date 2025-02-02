@@ -6,6 +6,22 @@
 #include "SSRFun_cpp.h"
 #include "bisectionFun_cpp.h"
 #include "dproposalFun_cpp.h"
+#include "distRcpp.h"
+#include "dinvgamma_cpp.h"
+#include "dmvnrm_arma_fast.h"
+#include "likelihoodFun_cpp.h"
+#include "likelihoodFun_SN_cpp.h"
+#include "likelihoodFun_SN_incr_cpp.h"
+#include "likelihoodFun_T_cpp.h"
+#include "likelihoodFun_T_incr_cpp.h"
+#include "logReferenceRatio_cpp.h"
+#include "mvnorm.h"
+#include "mypsnorm_cpp.h"
+#include "psnorm_cpp.h"
+#include "rCESSFun_cpp.h"
+#include "reference_d_x_cpp.h"
+#include "reference_d_x_initial_cpp.h"
+#include "rmvnorm_arma.h"
 
 using namespace Rcpp;
 
