@@ -1,5 +1,5 @@
 #include <RcppArmadillo.h>
-// #include "distRcpp.h"
+#include "distRcpp.h"
 // #include "SSRFun_cpp.h"
 // #include "dinvgamma_cpp.h"
 // #include "dmvnrm_arma_fast.h"
