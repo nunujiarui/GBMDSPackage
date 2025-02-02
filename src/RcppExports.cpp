@@ -3,7 +3,6 @@
 
 #include <RcppArmadillo.h>
 #include <Rcpp.h>
-#include "SSRFun_cpp.h"
 #include "bisectionFun_cpp.h"
 #include "dproposalFun_cpp.h"
 #include "distRcpp.h"
