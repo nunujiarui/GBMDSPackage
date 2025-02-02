@@ -13,7 +13,7 @@
 #include "likelihoodFun_T_incr_cpp.h"
 #include "logReferenceRatio_cpp.h"
 #include "mvnorm.h"
-#include "mypsnorm_cpp.h"
+
 #include "psnorm_cpp.h"
 #include "rCESSFun_cpp.h"
 #include "reference_d_x_cpp.h"
