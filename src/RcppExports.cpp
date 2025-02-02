@@ -3,25 +3,6 @@
 
 #include <RcppArmadillo.h>
 #include <Rcpp.h>
-#include "SSRFun_cpp.h"
-// #include "distRcpp.h"
-// #include "dinvgamma_cpp.h"
-// #include "dmvnrm_arma_fast.h"
-// #include "dproposalFun_cpp.h"
-// #include "likelihoodFun_SN_cpp.h"
-// #include "likelihoodFun_SN_incr_cpp.h"
-// #include "likelihoodFun_T_cpp.h"
-// #include "likelihoodFun_T_incr_cpp.h"
-// #include "likelihoodFun_cpp.h"
-// #include "logReferenceRatio_cpp.h"
-// #include "mvnorm.h"
-// #include "psnorm_cpp.h"
-// #include "rCESSFun_cpp.h"
-// #include "reference_d_x_cpp.h"
-// #include "reference_d_x_initial_cpp.h"
-// #include "rmvnorm_arma.h"
-// #include "SSRFun_cpp.h"
-
 
 using namespace Rcpp;
 
@@ -39,6 +20,21 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< arma::mat >::type d_mat(d_matSEXP);
     Rcpp::traits::input_parameter< arma::mat >::type delta_mat(delta_matSEXP);
     rcpp_result_gen = Rcpp::wrap(SSRFun_cpp(d_mat, delta_mat));
+    return rcpp_result_gen;
+END_RCPP
+}
+// bisectionFun_cpp
+// Calculate the next annealing parameter  double bisectionFun_cpp(double low, double high, arma::vec W, arma::vec logL, double phi);
+RcppExport SEXP _GBMDSpackage_bisectionFun_cpp(SEXP lowSEXP, SEXP highSEXP, SEXP WSEXP, SEXP logLSEXP, SEXP phiSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< double >::type low(lowSEXP);
+    Rcpp::traits::input_parameter< double >::type high(highSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type W(WSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type logL(logLSEXP);
+    Rcpp::traits::input_parameter< double >::type phi(phiSEXP);
+    rcpp_result_gen = Rcpp::wrap(bisectionFun_cpp(low, high, W, logL, phi));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -215,37 +211,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// likelihoodFun_SN_incr_cpp
-// likelihood function Rcpp::List likelihoodFun_SN_incr_cpp(arma::mat dist_mat, double upper_bound, Rcpp::List proposal_result, String metric, Rcpp::List hyperparList, double n_incr);
-RcppExport SEXP _GBMDSpackage_likelihoodFun_SN_incr_cpp(SEXP dist_matSEXP, SEXP upper_boundSEXP, SEXP proposal_resultSEXP, SEXP metricSEXP, SEXP hyperparListSEXP, SEXP n_incrSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type dist_mat(dist_matSEXP);
-    Rcpp::traits::input_parameter< double >::type upper_bound(upper_boundSEXP);
-    Rcpp::traits::input_parameter< Rcpp::List >::type proposal_result(proposal_resultSEXP);
-    Rcpp::traits::input_parameter< String >::type metric(metricSEXP);
-    Rcpp::traits::input_parameter< Rcpp::List >::type hyperparList(hyperparListSEXP);
-    Rcpp::traits::input_parameter< double >::type n_incr(n_incrSEXP);
-    rcpp_result_gen = Rcpp::wrap(likelihoodFun_SN_incr_cpp(dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr));
-    return rcpp_result_gen;
-END_RCPP
-}
-// likelihoodFun_SN_cpp
-// likelihood function Rcpp::List likelihoodFun_SN_cpp(arma::mat dist_mat, double upper_bound, Rcpp::List proposal_result, String metric, Rcpp::List hyperparList);
-RcppExport SEXP _GBMDSpackage_likelihoodFun_SN_cpp(SEXP dist_matSEXP, SEXP upper_boundSEXP, SEXP proposal_resultSEXP, SEXP metricSEXP, SEXP hyperparListSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type dist_mat(dist_matSEXP);
-    Rcpp::traits::input_parameter< double >::type upper_bound(upper_boundSEXP);
-    Rcpp::traits::input_parameter< Rcpp::List >::type proposal_result(proposal_resultSEXP);
-    Rcpp::traits::input_parameter< String >::type metric(metricSEXP);
-    Rcpp::traits::input_parameter< Rcpp::List >::type hyperparList(hyperparListSEXP);
-    rcpp_result_gen = Rcpp::wrap(likelihoodFun_SN_cpp(dist_mat, upper_bound, proposal_result, metric, hyperparList));
-    return rcpp_result_gen;
-END_RCPP
-}
 // likelihoodFun_T_cpp
 // likelihood function Rcpp::List likelihoodFun_T_cpp(arma::mat dist_mat, double upper_bound, Rcpp::List proposal_result, String metric, Rcpp::List hyperparList);
 RcppExport SEXP _GBMDSpackage_likelihoodFun_T_cpp(SEXP dist_matSEXP, SEXP upper_boundSEXP, SEXP proposal_resultSEXP, SEXP metricSEXP, SEXP hyperparListSEXP) {
@@ -274,52 +239,6 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< Rcpp::List >::type hyperparList(hyperparListSEXP);
     Rcpp::traits::input_parameter< double >::type n_incr(n_incrSEXP);
     rcpp_result_gen = Rcpp::wrap(likelihoodFun_T_incr_cpp(dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr));
-    return rcpp_result_gen;
-END_RCPP
-}
-// likelihoodFun_T_incr_cpp
-// likelihood function Rcpp::List likelihoodFun_T_incr_cpp(arma::mat dist_mat, double upper_bound, Rcpp::List proposal_result, String metric, Rcpp::List hyperparList, double n_incr);
-RcppExport SEXP _GBMDSpackage_likelihoodFun_T_incr_cpp(SEXP dist_matSEXP, SEXP upper_boundSEXP, SEXP proposal_resultSEXP, SEXP metricSEXP, SEXP hyperparListSEXP, SEXP n_incrSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type dist_mat(dist_matSEXP);
-    Rcpp::traits::input_parameter< double >::type upper_bound(upper_boundSEXP);
-    Rcpp::traits::input_parameter< Rcpp::List >::type proposal_result(proposal_resultSEXP);
-    Rcpp::traits::input_parameter< String >::type metric(metricSEXP);
-    Rcpp::traits::input_parameter< Rcpp::List >::type hyperparList(hyperparListSEXP);
-    Rcpp::traits::input_parameter< double >::type n_incr(n_incrSEXP);
-    rcpp_result_gen = Rcpp::wrap(likelihoodFun_T_incr_cpp(dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr));
-    return rcpp_result_gen;
-END_RCPP
-}
-// likelihoodFun_T_cpp
-// likelihood function Rcpp::List likelihoodFun_T_cpp(arma::mat dist_mat, double upper_bound, Rcpp::List proposal_result, String metric, Rcpp::List hyperparList);
-RcppExport SEXP _GBMDSpackage_likelihoodFun_T_cpp(SEXP dist_matSEXP, SEXP upper_boundSEXP, SEXP proposal_resultSEXP, SEXP metricSEXP, SEXP hyperparListSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type dist_mat(dist_matSEXP);
-    Rcpp::traits::input_parameter< double >::type upper_bound(upper_boundSEXP);
-    Rcpp::traits::input_parameter< Rcpp::List >::type proposal_result(proposal_resultSEXP);
-    Rcpp::traits::input_parameter< String >::type metric(metricSEXP);
-    Rcpp::traits::input_parameter< Rcpp::List >::type hyperparList(hyperparListSEXP);
-    rcpp_result_gen = Rcpp::wrap(likelihoodFun_T_cpp(dist_mat, upper_bound, proposal_result, metric, hyperparList));
-    return rcpp_result_gen;
-END_RCPP
-}
-// likelihoodFun_cpp
-// likelihood function Rcpp::List likelihoodFun_cpp(arma::mat dist_mat, double upper_bound, Rcpp::List proposal_result, String metric, Rcpp::List hyperparList);
-RcppExport SEXP _GBMDSpackage_likelihoodFun_cpp(SEXP dist_matSEXP, SEXP upper_boundSEXP, SEXP proposal_resultSEXP, SEXP metricSEXP, SEXP hyperparListSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat >::type dist_mat(dist_matSEXP);
-    Rcpp::traits::input_parameter< double >::type upper_bound(upper_boundSEXP);
-    Rcpp::traits::input_parameter< Rcpp::List >::type proposal_result(proposal_resultSEXP);
-    Rcpp::traits::input_parameter< String >::type metric(metricSEXP);
-    Rcpp::traits::input_parameter< Rcpp::List >::type hyperparList(hyperparListSEXP);
-    rcpp_result_gen = Rcpp::wrap(likelihoodFun_cpp(dist_mat, upper_bound, proposal_result, metric, hyperparList));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -578,6 +497,7 @@ END_RCPP
 static const R_CallMethodDef CallEntries[] = {
     {"_GBMDSpackage_SSRFun_cpp", (DL_FUNC) &_GBMDSpackage_SSRFun_cpp, 2},
     {"_GBMDSpackage_bisectionFun_cpp", (DL_FUNC) &_GBMDSpackage_bisectionFun_cpp, 5},
+    {"_GBMDSpackage_bisectionFun_cpp", (DL_FUNC) &_GBMDSpackage_bisectionFun_cpp, 5},
     {"_GBMDSpackage_dinvgamma_cpp", (DL_FUNC) &_GBMDSpackage_dinvgamma_cpp, 4},
     {"_GBMDSpackage_dmvnrm_arma_fast", (DL_FUNC) &_GBMDSpackage_dmvnrm_arma_fast, 4},
     {"_GBMDSpackage_dmvnrm_arma_fast", (DL_FUNC) &_GBMDSpackage_dmvnrm_arma_fast, 4},
@@ -589,13 +509,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_GBMDSpackage_initialFun_cpp", (DL_FUNC) &_GBMDSpackage_initialFun_cpp, 4},
     {"_GBMDSpackage_likelihoodFun_SN_cpp", (DL_FUNC) &_GBMDSpackage_likelihoodFun_SN_cpp, 5},
     {"_GBMDSpackage_likelihoodFun_SN_incr_cpp", (DL_FUNC) &_GBMDSpackage_likelihoodFun_SN_incr_cpp, 6},
-    {"_GBMDSpackage_likelihoodFun_SN_incr_cpp", (DL_FUNC) &_GBMDSpackage_likelihoodFun_SN_incr_cpp, 6},
-    {"_GBMDSpackage_likelihoodFun_SN_cpp", (DL_FUNC) &_GBMDSpackage_likelihoodFun_SN_cpp, 5},
     {"_GBMDSpackage_likelihoodFun_T_cpp", (DL_FUNC) &_GBMDSpackage_likelihoodFun_T_cpp, 5},
     {"_GBMDSpackage_likelihoodFun_T_incr_cpp", (DL_FUNC) &_GBMDSpackage_likelihoodFun_T_incr_cpp, 6},
-    {"_GBMDSpackage_likelihoodFun_T_incr_cpp", (DL_FUNC) &_GBMDSpackage_likelihoodFun_T_incr_cpp, 6},
-    {"_GBMDSpackage_likelihoodFun_T_cpp", (DL_FUNC) &_GBMDSpackage_likelihoodFun_T_cpp, 5},
-    {"_GBMDSpackage_likelihoodFun_cpp", (DL_FUNC) &_GBMDSpackage_likelihoodFun_cpp, 5},
     {"_GBMDSpackage_likelihoodFun_cpp", (DL_FUNC) &_GBMDSpackage_likelihoodFun_cpp, 5},
     {"_GBMDSpackage_logReferenceRatio_cpp", (DL_FUNC) &_GBMDSpackage_logReferenceRatio_cpp, 3},
     {"_GBMDSpackage_multinomialResampleFun_cpp", (DL_FUNC) &_GBMDSpackage_multinomialResampleFun_cpp, 1},

@@ -9,6 +9,10 @@ bisectionFun_cpp <- function(low, high, W, logL, phi) {
     .Call(`_GBMDSpackage_bisectionFun_cpp`, low, high, W, logL, phi)
 }
 
+bisectionFun_cpp <- function(low, high, W, logL, phi) {
+    .Call(`_GBMDSpackage_bisectionFun_cpp`, low, high, W, logL, phi)
+}
+
 dinvgamma_cpp <- function(x, shape, rate, log) {
     .Call(`_GBMDSpackage_dinvgamma_cpp`, x, shape, rate, log)
 }
@@ -53,32 +57,12 @@ likelihoodFun_SN_incr_cpp <- function(dist_mat, upper_bound, proposal_result, me
     .Call(`_GBMDSpackage_likelihoodFun_SN_incr_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr)
 }
 
-likelihoodFun_SN_incr_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr) {
-    .Call(`_GBMDSpackage_likelihoodFun_SN_incr_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr)
-}
-
-likelihoodFun_SN_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList) {
-    .Call(`_GBMDSpackage_likelihoodFun_SN_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList)
-}
-
 likelihoodFun_T_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList) {
     .Call(`_GBMDSpackage_likelihoodFun_T_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList)
 }
 
 likelihoodFun_T_incr_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr) {
     .Call(`_GBMDSpackage_likelihoodFun_T_incr_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr)
-}
-
-likelihoodFun_T_incr_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr) {
-    .Call(`_GBMDSpackage_likelihoodFun_T_incr_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr)
-}
-
-likelihoodFun_T_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList) {
-    .Call(`_GBMDSpackage_likelihoodFun_T_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList)
-}
-
-likelihoodFun_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList) {
-    .Call(`_GBMDSpackage_likelihoodFun_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList)
 }
 
 likelihoodFun_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList) {
