@@ -1,5 +1,5 @@
 #include <RcppArmadillo.h>
-#include "reference_d_x_initial_cpp.h"
+#include "reference_d_x_cpp.h"
 #include "rmvnorm_arma.h"
 #include "distRcpp.h"
 #include "SSRFun_cpp.h"
