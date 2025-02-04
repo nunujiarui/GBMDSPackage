@@ -2,7 +2,7 @@
 using namespace arma;
 // [[Rcpp::depends(RcppArmadillo)]]
 
-static double const log2pi = std::log(2.0 * M_PI);
+// static double const log2pi = std::log(2.0 * M_PI);
 
 /* C++ version of the dtrmv BLAS function */
 void inplace_tri_mat_mult(arma::rowvec &x, arma::mat const &trimat){
@@ -26,6 +26,7 @@ arma::vec dmvnrm_arma_fast(arma::mat const &x,
     xdim = x.n_cols;
   arma::vec out(n);
   arma::mat const rooti = arma::inv(trimatu(arma::chol(sigma)));
+  double const log2pi = std::log(2.0 * M_PI);
   double const rootisum = arma::sum(log(rooti.diag())), 
     constants = -(double)xdim/2.0 * log2pi, 
     other_terms = rootisum + constants;
