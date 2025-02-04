@@ -16,7 +16,7 @@
 
 #include "psnorm_cpp.h"
 
-#include "reference_d_x_cpp.h"
+
 #include "reference_d_x_initial_cpp.h"
 #include "rmvnorm_arma.h"
 
