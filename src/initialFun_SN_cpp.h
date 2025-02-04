@@ -1,8 +1,8 @@
 #include <RcppArmadillo.h>
-#include "reference_d_x_cpp.h"
-#include "rmvnorm_arma.h"
-#include "distRcpp.h"
-#include "SSRFun_cpp.h"
+//#include "reference_d_x_cpp.h"
+//#include "rmvnorm_arma.h"
+//#include "distRcpp.h"
+//#include "SSRFun_cpp.h"
 using namespace arma;
 // [[Rcpp::depends(RcppArmadillo)]]
 using namespace Rcpp;
