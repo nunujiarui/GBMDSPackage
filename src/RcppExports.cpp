@@ -18,7 +18,7 @@
 #include "psnorm_cpp.h"
 
 
-#include "rmvnorm_arma.h"
+
 
 using namespace Rcpp;
 
