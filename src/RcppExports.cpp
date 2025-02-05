@@ -11,6 +11,7 @@
 #include "initialFun_SN_incr_cpp.h"
 #include "initialFun_T_cpp.h"
 #include "initialFun_T_incr_cpp.h"
+#include "multinomialResampleFun_cpp.h"
 
 
 #include "likelihoodFun_cpp.h"
