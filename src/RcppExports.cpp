@@ -301,20 +301,20 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// mypsnorm_cpp
-double mypsnorm_cpp(double q, double mean, double sd, double psi);
-RcppExport SEXP _GBMDSpackage_mypsnorm_cpp(SEXP qSEXP, SEXP meanSEXP, SEXP sdSEXP, SEXP psiSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< double >::type q(qSEXP);
-    Rcpp::traits::input_parameter< double >::type mean(meanSEXP);
-    Rcpp::traits::input_parameter< double >::type sd(sdSEXP);
-    Rcpp::traits::input_parameter< double >::type psi(psiSEXP);
-    rcpp_result_gen = Rcpp::wrap(mypsnorm_cpp(q, mean, sd, psi));
-    return rcpp_result_gen;
-END_RCPP
-}
+// // mypsnorm_cpp
+// double mypsnorm_cpp(double q, double mean, double sd, double psi);
+// RcppExport SEXP _GBMDSpackage_mypsnorm_cpp(SEXP qSEXP, SEXP meanSEXP, SEXP sdSEXP, SEXP psiSEXP) {
+// BEGIN_RCPP
+//     Rcpp::RObject rcpp_result_gen;
+//     Rcpp::RNGScope rcpp_rngScope_gen;
+//     Rcpp::traits::input_parameter< double >::type q(qSEXP);
+//     Rcpp::traits::input_parameter< double >::type mean(meanSEXP);
+//     Rcpp::traits::input_parameter< double >::type sd(sdSEXP);
+//     Rcpp::traits::input_parameter< double >::type psi(psiSEXP);
+//     rcpp_result_gen = Rcpp::wrap(mypsnorm_cpp(q, mean, sd, psi));
+//     return rcpp_result_gen;
+// END_RCPP
+// }
 // proposalFun_SN_cpp
 // proposal function Rcpp::List proposalFun_SN_cpp(arma::mat dist_mat, Rcpp::List currentVal, arma::mat prevX, double annealingPar, String metric, Rcpp::List hyperparList, double upper_bound, arma::vec update_list, arma::vec update_list_x);
 RcppExport SEXP _GBMDSpackage_proposalFun_SN_cpp(SEXP dist_matSEXP, SEXP currentValSEXP, SEXP prevXSEXP, SEXP annealingParSEXP, SEXP metricSEXP, SEXP hyperparListSEXP, SEXP upper_boundSEXP, SEXP update_listSEXP, SEXP update_list_xSEXP) {
@@ -508,7 +508,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_GBMDSpackage_logReferenceRatio_cpp", (DL_FUNC) &_GBMDSpackage_logReferenceRatio_cpp, 3},
     {"_GBMDSpackage_multinomialResampleFun_cpp", (DL_FUNC) &_GBMDSpackage_multinomialResampleFun_cpp, 1},
     {"_GBMDSpackage_rmvnorm_arma_stochvol", (DL_FUNC) &_GBMDSpackage_rmvnorm_arma_stochvol, 3},
-    {"_GBMDSpackage_mypsnorm_cpp", (DL_FUNC) &_GBMDSpackage_mypsnorm_cpp, 4},
+    // {"_GBMDSpackage_mypsnorm_cpp", (DL_FUNC) &_GBMDSpackage_mypsnorm_cpp, 4},
     {"_GBMDSpackage_proposalFun_SN_cpp", (DL_FUNC) &_GBMDSpackage_proposalFun_SN_cpp, 9},
     {"_GBMDSpackage_proposalFun_SN_incr_cpp", (DL_FUNC) &_GBMDSpackage_proposalFun_SN_incr_cpp, 10},
     {"_GBMDSpackage_proposalFun_T_cpp", (DL_FUNC) &_GBMDSpackage_proposalFun_T_cpp, 9},
