@@ -1,11 +1,11 @@
 #include <RcppArmadillo.h>
-#include "rmvnorm_arma.h"
-#include "distRcpp.h"
-#include "SSRFun_cpp.h"
-#include "dinvgamma_cpp.h"
-#include "dmvnrm_arma_fast.h"
-#include "likelihoodFun_SN_cpp.h"
-#include "logReferenceRatio_cpp.h"
+// #include "rmvnorm_arma.h"
+// #include "distRcpp.h"
+// #include "SSRFun_cpp.h"
+// #include "dinvgamma_cpp.h"
+// #include "dmvnrm_arma_fast.h"
+// #include "likelihoodFun_SN_cpp.h"
+// #include "logReferenceRatio_cpp.h"
 using namespace arma;
 // [[Rcpp::depends(RcppArmadillo)]]
 using namespace Rcpp;
