@@ -1,7 +1,7 @@
 #include <RcppArmadillo.h>
 using namespace arma;
 // [[Rcpp::depends(RcppArmadillo)]]
-// #include "reference_d_x_cpp.h"
+#include "reference_d_x_cpp.h"
 using namespace Rcpp;
 // [[Rcpp::export]]
 
