@@ -4,9 +4,9 @@
 #include "SSRFun_cpp.h"
 #include "dinvgamma_cpp.h"
 #include "dmvnrm_arma_fast.h"
+#include "mypsnorm_cpp.h"
 #include "likelihoodFun_SN_incr_cpp.h"
 #include "logReferenceRatio_cpp.h"
-#include "mypsnorm_cpp.h"
 using namespace arma;
 // [[Rcpp::depends(RcppArmadillo)]]
 using namespace Rcpp;
