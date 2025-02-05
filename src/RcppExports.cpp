@@ -11,7 +11,7 @@
 // #include "reference_d_x_cpp.h"
 #include "rESSFun_cpp.h"
 #include "rCESSFun_cpp.h"
-#include "bisectionFun_cpp.h"
+//#include "bisectionFun_cpp.h"
 #include "dproposalFun_cpp.h"
 #include "rmvnorm_arma.h"
 #include "logReferenceRatio_cpp.h"
