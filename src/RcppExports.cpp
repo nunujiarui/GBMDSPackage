@@ -6,10 +6,12 @@
 #include "bisectionFun_cpp.h"
 #include "dproposalFun_cpp.h"
 #include "rmvnorm_arma.h"
+#include "initialFun_cpp.h"
 #include "initialFun_SN_cpp.h"
 #include "initialFun_SN_incr_cpp.h"
 #include "initialFun_T_cpp.h"
 #include "initialFun_T_incr_cpp.h"
+
 
 #include "likelihoodFun_cpp.h"
 #include "likelihoodFun_SN_cpp.h"
