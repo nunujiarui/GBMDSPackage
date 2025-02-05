@@ -412,20 +412,20 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// rCESSFun_cpp
-// Calculate relative conditional effective sample size double rCESSFun_cpp(arma::vec W, arma::vec logL, double num, double phi);
-RcppExport SEXP _GBMDSpackage_rCESSFun_cpp(SEXP WSEXP, SEXP logLSEXP, SEXP numSEXP, SEXP phiSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::vec >::type W(WSEXP);
-    Rcpp::traits::input_parameter< arma::vec >::type logL(logLSEXP);
-    Rcpp::traits::input_parameter< double >::type num(numSEXP);
-    Rcpp::traits::input_parameter< double >::type phi(phiSEXP);
-    rcpp_result_gen = Rcpp::wrap(rCESSFun_cpp(W, logL, num, phi));
-    return rcpp_result_gen;
-END_RCPP
-}
+// // rCESSFun_cpp
+// // Calculate relative conditional effective sample size double rCESSFun_cpp(arma::vec W, arma::vec logL, double num, double phi);
+// RcppExport SEXP _GBMDSpackage_rCESSFun_cpp(SEXP WSEXP, SEXP logLSEXP, SEXP numSEXP, SEXP phiSEXP) {
+// BEGIN_RCPP
+//     Rcpp::RObject rcpp_result_gen;
+//     Rcpp::RNGScope rcpp_rngScope_gen;
+//     Rcpp::traits::input_parameter< arma::vec >::type W(WSEXP);
+//     Rcpp::traits::input_parameter< arma::vec >::type logL(logLSEXP);
+//     Rcpp::traits::input_parameter< double >::type num(numSEXP);
+//     Rcpp::traits::input_parameter< double >::type phi(phiSEXP);
+//     rcpp_result_gen = Rcpp::wrap(rCESSFun_cpp(W, logL, num, phi));
+//     return rcpp_result_gen;
+// END_RCPP
+// }
 // rESSFun_cpp
 // Calculate relative effective sample size double rESSFun_cpp(const std::vector<double>& logW);
 RcppExport SEXP _GBMDSpackage_rESSFun_cpp(SEXP logWSEXP) {
@@ -500,7 +500,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_GBMDSpackage_proposalFun_T_incr_cpp", (DL_FUNC) &_GBMDSpackage_proposalFun_T_incr_cpp, 10},
     {"_GBMDSpackage_proposalFun_cpp", (DL_FUNC) &_GBMDSpackage_proposalFun_cpp, 9},
     {"_GBMDSpackage_psnorm_cpp", (DL_FUNC) &_GBMDSpackage_psnorm_cpp, 4},
-    {"_GBMDSpackage_rCESSFun_cpp", (DL_FUNC) &_GBMDSpackage_rCESSFun_cpp, 4},
+    // {"_GBMDSpackage_rCESSFun_cpp", (DL_FUNC) &_GBMDSpackage_rCESSFun_cpp, 4},
     {"_GBMDSpackage_rESSFun_cpp", (DL_FUNC) &_GBMDSpackage_rESSFun_cpp, 1},
     {"_GBMDSpackage_reference_d_x_cpp", (DL_FUNC) &_GBMDSpackage_reference_d_x_cpp, 2},
     {"_GBMDSpackage_rmvnorm_arma", (DL_FUNC) &_GBMDSpackage_rmvnorm_arma, 3},
