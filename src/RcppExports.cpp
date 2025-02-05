@@ -7,6 +7,7 @@
 #include "distRcpp.h"
 #include "SSRFun_cpp.h"
 #include "dinvgamma_cpp.h"
+#include "reference_d_x_cpp.h"
 #include "dmvnrm_arma_fast.h"
 #include "rESSFun_cpp.h"
 #include "rCESSFun_cpp.h"
