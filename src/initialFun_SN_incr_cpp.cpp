@@ -1,4 +1,5 @@
 #include <RcppArmadillo.h>
+#include "dmvnrm_arma_fast.h"
 #include "reference_d_x_cpp.h"
 #include "rmvnorm_arma.h"
 #include "distRcpp.h"
