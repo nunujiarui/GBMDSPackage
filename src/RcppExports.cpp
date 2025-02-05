@@ -3,6 +3,11 @@
 
 #include <RcppArmadillo.h>
 #include <Rcpp.h>
+#include "distRcpp.h"
+#include "SSRFun_cpp.h"
+#include "dinvgamma_cpp.h"
+#include "dmvnrm_arma_fast.h"
+#include "rCESSFun_cpp.h"
 #include "bisectionFun_cpp.h"
 #include "dproposalFun_cpp.h"
 #include "rmvnorm_arma.h"
