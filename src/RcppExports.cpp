@@ -18,7 +18,7 @@
 #include "multinomialResampleFun_cpp.h"
 #include "stressFun_cpp.h"
 #include "mvnorm.h"
-#include "psnorm_cpp.h"
+// #include "psnorm_cpp.h"
 
 #include "likelihoodFun_cpp.h"
 #include "likelihoodFun_SN_cpp.h"
