@@ -6,6 +6,7 @@
 #include "bisectionFun_cpp.h"
 #include "dproposalFun_cpp.h"
 #include "initialFun_SN_cpp.h"
+#include "initialFun_SN_incr_cpp.h"
 
 #include "likelihoodFun_cpp.h"
 #include "likelihoodFun_SN_cpp.h"
