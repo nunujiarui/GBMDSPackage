@@ -1,7 +1,7 @@
 #include <RcppArmadillo.h>
 using namespace arma;
 // [[Rcpp::depends(RcppArmadillo)]]
-// #include "dmvnrm_arma_fast.h"
+#include "dmvnrm_arma_fast.h"
 
 using namespace Rcpp;
 // using namespace arma;
