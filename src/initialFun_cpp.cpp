@@ -63,10 +63,3 @@ Rcpp::List initialFun_cpp(arma::mat cmds_result, arma::mat dist_mat,
   return(output);
 }
 
-
-/*** R
-
-# initialFun_cpp(cmds_result, dist_mat, metric, hyperparList)
-
-
-*/
