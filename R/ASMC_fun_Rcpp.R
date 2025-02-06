@@ -11,6 +11,7 @@
 #' @return results of weighted particles, marginal likelihood estimates
 #' @examples
 #' print(" ")
+#' @export
 #' 
 
 ASMC_Rcpp <- function(model, dist.mat, tuningparList, n.core, 
