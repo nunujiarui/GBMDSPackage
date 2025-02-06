@@ -1,8 +1,7 @@
-#ifndef DISTRCPP_H
-#define DISTRCPP_H
+#ifndef MULTINOMIALRESAMPLEFUN_CPP_H
+#define MULTINOMIALRESAMPLEFUN_CPP_H
 
 using namespace Rcpp;
-
 
 // [[Rcpp::export]]
 
