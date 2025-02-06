@@ -41,18 +41,3 @@ arma::vec dmvnrm_arma_fast(arma::mat const &x,
     return out;
   return exp(out);
 }
-
-
-
-/*** R
-# sigma <- diag(0.01, 2)
-# means <- matrix(data = c(1.5,0.3,-0.8,-2,1.1, 0.5), nrow = 3)[1, ]
-# X     <- matrix(data = c(1.2,-0.1,-0.5,-1.3,0.9, 0.7), nrow = 3)[1, ]
-# 
-# sigma <- bayesm::rwishart(10,diag(2))$IW
-# means <- rnorm(2)
-# X     <- mvtnorm::rmvnorm(1, means, sigma)
-# 
-# dmvnrm_arma_fast(X,means,sigma,FALSE)
-
-*/
