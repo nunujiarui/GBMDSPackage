@@ -2,6 +2,7 @@
 #define LOGREFERENCERATIO_CPP_H
 
 #include <RcppArmadillo.h>
+#include "reference_d_x_cpp.h"
 
 using namespace Rcpp;
 using namespace arma;
