@@ -213,19 +213,3 @@ Rcpp::List proposalFun_SN_incr_cpp(arma::mat dist_mat, Rcpp::List currentVal,
   return(output);
   
 }
-
-
-/*** R
-
-# proposalFun_SN_cpp(dist_mat, currentVal, prevX, 0.3, metric, hyperparList)
-
-# proposalFun_cpp(dist.mat, currentVal, prevX, tau[r], metric, hyperparList)
-
-# set.seed(452)
-# start.time <- Sys.time()
-# erin <- lapply(1:K, function(i){proposalFun_SN_cpp(dist_mat, currentVal, prevX, 
-#                                                    0.3, metric, hyperparList)})
-# end.time <- Sys.time()
-# end.time - start.time
-
-*/

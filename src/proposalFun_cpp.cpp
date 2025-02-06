@@ -182,11 +182,3 @@ Rcpp::List proposalFun_cpp(arma::mat dist_mat, Rcpp::List currentVal,
   
 }
 
-
-/*** R
-
-# proposalFun_cpp(dist_mat, currentVal, prevX, 0.3, metric, hyperparList)
-
-# proposalFun_cpp(dist.mat, currentVal, prevX, tau[r], metric, hyperparList)
-
-*/

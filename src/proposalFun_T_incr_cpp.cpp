@@ -224,13 +224,3 @@ Rcpp::List proposalFun_T_incr_cpp(arma::mat dist_mat, Rcpp::List currentVal,
   
 }
 
-
-/*** R
-
-# proposalFun_T_cpp(dist_mat, currentVal, prevX, 0.3, metric, hyperparList)
-
-# proposalFun_cpp(dist.mat, currentVal, prevX, tau[r], metric, hyperparList)
-
-# prop.result <- proposalFun_T_incr_cpp(dist.mat, currentVal, prevX, tau[r], metric, hyperparList, n.incr)
-
-*/
