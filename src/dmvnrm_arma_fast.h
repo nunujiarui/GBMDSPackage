@@ -14,4 +14,4 @@ arma::vec dmvnrm_arma_fast(arma::mat const &x,
                            arma::mat const &sigma, 
                            bool const logd = false);
 
-
+#endif
