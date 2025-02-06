@@ -68,16 +68,3 @@ Rcpp::List initialFun_SN_cpp(arma::mat cmds_result, arma::mat dist_mat,
   
   return(output);
 }
-
-
-/*** R
-
-# initialFun_SN_cpp(cmds_result, dist_mat, metric, hyperparList)
-# 
-# initialFun_SN_cpp(cmds_result = cmds.result$points, dist_mat = dist.mat, 
-#                   metric, hyperparList)
-# 
-# theta <- lapply(1:K, function(i){initialFun_SN_cpp(cmds.result$points, dist.mat, metric, hyperparList)})
-# 
-
-*/
