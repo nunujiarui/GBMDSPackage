@@ -1,14 +1,12 @@
 Package: GBMDSpackage
 Type: Package
-Title: What the Package Does in One 'Title
-     Case' Line
+Title: Generalized Bayesian multidimensional scaling and model comparison
 Version: 1.0
 Date: 2025-01-27
-Author: Erin Zhang
-Maintainer: Erin Zhang <jiaruiz@sfu.ca>
-Description: One paragraph description of
-     what the package does as one or more
-     full sentences.
+Author: Jiarui Erin Zhang
+Maintainer: Jiarui Erin Zhang <jiaruiz@sfu.ca>
+Description: A Generalized Bayesian approach to multidimensional scaling and model comparison. 
+The package consists of implementations of the methods described in the manuscript "Generalized Bayesian Multidimensional Scaling and Model Comparison".
 License: GPL (>= 2)
 Imports: cluster,
     doMC,
