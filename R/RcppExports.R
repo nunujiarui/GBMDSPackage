@@ -5,6 +5,10 @@ SSRFun_cpp <- function(d_mat, delta_mat) {
     .Call(`_GBMDSpackage_SSRFun_cpp`, d_mat, delta_mat)
 }
 
+SSRFun_cpp <- function(d_mat, delta_mat) {
+    .Call(`_GBMDSpackage_SSRFun_cpp`, d_mat, delta_mat)
+}
+
 bisectionFun_cpp <- function(low, high, W, logL, phi) {
     .Call(`_GBMDSpackage_bisectionFun_cpp`, low, high, W, logL, phi)
 }
@@ -15,6 +19,14 @@ bisectionFun_cpp <- function(low, high, W, logL, phi) {
 
 dinvgamma_cpp <- function(x, shape, rate, log) {
     .Call(`_GBMDSpackage_dinvgamma_cpp`, x, shape, rate, log)
+}
+
+dinvgamma_cpp <- function(x, shape, rate, log) {
+    .Call(`_GBMDSpackage_dinvgamma_cpp`, x, shape, rate, log)
+}
+
+distRcpp <- function(X, metric) {
+    .Call(`_GBMDSpackage_distRcpp`, X, metric)
 }
 
 dmvnrm_arma_fast <- function(x, mean, sigma, logd = FALSE) {
@@ -29,8 +41,20 @@ dproposalFun_cpp <- function(dist_mat, para_result_l, para_result_r, metric, hyp
     .Call(`_GBMDSpackage_dproposalFun_cpp`, dist_mat, para_result_l, para_result_r, metric, hyperparList)
 }
 
+dproposalFun_cpp <- function(dist_mat, para_result_l, para_result_r, metric, hyperparList) {
+    .Call(`_GBMDSpackage_dproposalFun_cpp`, dist_mat, para_result_l, para_result_r, metric, hyperparList)
+}
+
 initialFun_SN_cpp <- function(cmds_result, dist_mat, metric, hyperparList) {
     .Call(`_GBMDSpackage_initialFun_SN_cpp`, cmds_result, dist_mat, metric, hyperparList)
+}
+
+initialFun_SN_cpp <- function(cmds_result, dist_mat, metric, hyperparList) {
+    .Call(`_GBMDSpackage_initialFun_SN_cpp`, cmds_result, dist_mat, metric, hyperparList)
+}
+
+initialFun_SN_incr_cpp <- function(prev_result, dist_mat, metric, hyperparList) {
+    .Call(`_GBMDSpackage_initialFun_SN_incr_cpp`, prev_result, dist_mat, metric, hyperparList)
 }
 
 initialFun_SN_incr_cpp <- function(prev_result, dist_mat, metric, hyperparList) {
@@ -41,8 +65,20 @@ initialFun_T_cpp <- function(cmds_result, dist_mat, metric, hyperparList) {
     .Call(`_GBMDSpackage_initialFun_T_cpp`, cmds_result, dist_mat, metric, hyperparList)
 }
 
+initialFun_T_cpp <- function(cmds_result, dist_mat, metric, hyperparList) {
+    .Call(`_GBMDSpackage_initialFun_T_cpp`, cmds_result, dist_mat, metric, hyperparList)
+}
+
 initialFun_T_incr_cpp <- function(prev_result, dist_mat, metric, hyperparList) {
     .Call(`_GBMDSpackage_initialFun_T_incr_cpp`, prev_result, dist_mat, metric, hyperparList)
+}
+
+initialFun_T_incr_cpp <- function(prev_result, dist_mat, metric, hyperparList) {
+    .Call(`_GBMDSpackage_initialFun_T_incr_cpp`, prev_result, dist_mat, metric, hyperparList)
+}
+
+initialFun_cpp <- function(cmds_result, dist_mat, metric, hyperparList) {
+    .Call(`_GBMDSpackage_initialFun_cpp`, cmds_result, dist_mat, metric, hyperparList)
 }
 
 initialFun_cpp <- function(cmds_result, dist_mat, metric, hyperparList) {
@@ -53,8 +89,20 @@ likelihoodFun_SN_cpp <- function(dist_mat, upper_bound, proposal_result, metric,
     .Call(`_GBMDSpackage_likelihoodFun_SN_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList)
 }
 
+likelihoodFun_SN_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList) {
+    .Call(`_GBMDSpackage_likelihoodFun_SN_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList)
+}
+
 likelihoodFun_SN_incr_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr) {
     .Call(`_GBMDSpackage_likelihoodFun_SN_incr_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr)
+}
+
+likelihoodFun_SN_incr_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr) {
+    .Call(`_GBMDSpackage_likelihoodFun_SN_incr_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr)
+}
+
+likelihoodFun_T_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList) {
+    .Call(`_GBMDSpackage_likelihoodFun_T_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList)
 }
 
 likelihoodFun_T_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList) {
@@ -65,8 +113,20 @@ likelihoodFun_T_incr_cpp <- function(dist_mat, upper_bound, proposal_result, met
     .Call(`_GBMDSpackage_likelihoodFun_T_incr_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr)
 }
 
+likelihoodFun_T_incr_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr) {
+    .Call(`_GBMDSpackage_likelihoodFun_T_incr_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList, n_incr)
+}
+
 likelihoodFun_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList) {
     .Call(`_GBMDSpackage_likelihoodFun_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList)
+}
+
+likelihoodFun_cpp <- function(dist_mat, upper_bound, proposal_result, metric, hyperparList) {
+    .Call(`_GBMDSpackage_likelihoodFun_cpp`, dist_mat, upper_bound, proposal_result, metric, hyperparList)
+}
+
+logReferenceRatio_cpp <- function(new_x, current_x, prev_x) {
+    .Call(`_GBMDSpackage_logReferenceRatio_cpp`, new_x, current_x, prev_x)
 }
 
 logReferenceRatio_cpp <- function(new_x, current_x, prev_x) {
@@ -77,8 +137,20 @@ multinomialResampleFun_cpp <- function(W) {
     .Call(`_GBMDSpackage_multinomialResampleFun_cpp`, W)
 }
 
+multinomialResampleFun_cpp <- function(W) {
+    .Call(`_GBMDSpackage_multinomialResampleFun_cpp`, W)
+}
+
 rmvnorm_arma_stochvol <- function(n, precision, location) {
     .Call(`_GBMDSpackage_rmvnorm_arma_stochvol`, n, precision, location)
+}
+
+rmvnorm_arma_stochvol <- function(n, precision, location) {
+    .Call(`_GBMDSpackage_rmvnorm_arma_stochvol`, n, precision, location)
+}
+
+mypsnorm_cpp <- function(q, mean, sd, psi) {
+    .Call(`_GBMDSpackage_mypsnorm_cpp`, q, mean, sd, psi)
 }
 
 mypsnorm_cpp <- function(q, mean, sd, psi) {
@@ -89,8 +161,20 @@ proposalFun_SN_cpp <- function(dist_mat, currentVal, prevX, annealingPar, metric
     .Call(`_GBMDSpackage_proposalFun_SN_cpp`, dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, upper_bound, update_list, update_list_x)
 }
 
+proposalFun_SN_cpp <- function(dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, upper_bound, update_list, update_list_x) {
+    .Call(`_GBMDSpackage_proposalFun_SN_cpp`, dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, upper_bound, update_list, update_list_x)
+}
+
 proposalFun_SN_incr_cpp <- function(dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, n_incr, upper_bound, update_list, update_list_x) {
     .Call(`_GBMDSpackage_proposalFun_SN_incr_cpp`, dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, n_incr, upper_bound, update_list, update_list_x)
+}
+
+proposalFun_SN_incr_cpp <- function(dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, n_incr, upper_bound, update_list, update_list_x) {
+    .Call(`_GBMDSpackage_proposalFun_SN_incr_cpp`, dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, n_incr, upper_bound, update_list, update_list_x)
+}
+
+proposalFun_T_cpp <- function(dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, upper_bound, update_list, update_list_x) {
+    .Call(`_GBMDSpackage_proposalFun_T_cpp`, dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, upper_bound, update_list, update_list_x)
 }
 
 proposalFun_T_cpp <- function(dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, upper_bound, update_list, update_list_x) {
@@ -101,6 +185,14 @@ proposalFun_T_incr_cpp <- function(dist_mat, currentVal, prevX, annealingPar, me
     .Call(`_GBMDSpackage_proposalFun_T_incr_cpp`, dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, n_incr, upper_bound, update_list, update_list_x)
 }
 
+proposalFun_T_incr_cpp <- function(dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, n_incr, upper_bound, update_list, update_list_x) {
+    .Call(`_GBMDSpackage_proposalFun_T_incr_cpp`, dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, n_incr, upper_bound, update_list, update_list_x)
+}
+
+proposalFun_cpp <- function(dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, upper_bound, update_list, update_list_x) {
+    .Call(`_GBMDSpackage_proposalFun_cpp`, dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, upper_bound, update_list, update_list_x)
+}
+
 proposalFun_cpp <- function(dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, upper_bound, update_list, update_list_x) {
     .Call(`_GBMDSpackage_proposalFun_cpp`, dist_mat, currentVal, prevX, annealingPar, metric, hyperparList, upper_bound, update_list, update_list_x)
 }
@@ -109,8 +201,20 @@ psnorm_cpp <- function(q, mean, sd, psi) {
     .Call(`_GBMDSpackage_psnorm_cpp`, q, mean, sd, psi)
 }
 
+psnorm_cpp <- function(q, mean, sd, psi) {
+    .Call(`_GBMDSpackage_psnorm_cpp`, q, mean, sd, psi)
+}
+
 rCESSFun_cpp <- function(W, logL, num, phi) {
     .Call(`_GBMDSpackage_rCESSFun_cpp`, W, logL, num, phi)
+}
+
+rCESSFun_cpp <- function(W, logL, num, phi) {
+    .Call(`_GBMDSpackage_rCESSFun_cpp`, W, logL, num, phi)
+}
+
+rESSFun_cpp <- function(logW) {
+    .Call(`_GBMDSpackage_rESSFun_cpp`, logW)
 }
 
 rESSFun_cpp <- function(logW) {
@@ -125,8 +229,20 @@ reference_d_x_cpp <- function(x, prev_x) {
     .Call(`_GBMDSpackage_reference_d_x_cpp`, x, prev_x)
 }
 
+reference_d_x_cpp <- function(x, prev_x) {
+    .Call(`_GBMDSpackage_reference_d_x_cpp`, x, prev_x)
+}
+
 rmvnorm_arma <- function(n, mu, sigma) {
     .Call(`_GBMDSpackage_rmvnorm_arma`, n, mu, sigma)
+}
+
+rmvnorm_arma <- function(n, mu, sigma) {
+    .Call(`_GBMDSpackage_rmvnorm_arma`, n, mu, sigma)
+}
+
+stressFun_cpp <- function(d_mat, delta_mat) {
+    .Call(`_GBMDSpackage_stressFun_cpp`, d_mat, delta_mat)
 }
 
 stressFun_cpp <- function(d_mat, delta_mat) {
