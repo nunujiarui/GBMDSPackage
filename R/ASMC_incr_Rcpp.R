@@ -1,5 +1,4 @@
-# This script contains the main function to perform annealed SMC algorithm with adaptive inference.
-#'
+#' @title run ASMC for MDS with an incremental dimension using integration of R and C++ to boost computing performance
 #' @param model likelihood model, including " " ...
 #' @param dist.mat      distance matrix
 #' @param tuningparList  SMC tuning parameters

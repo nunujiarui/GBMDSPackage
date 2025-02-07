@@ -1,18 +1,18 @@
-# This script contains the main function to perform annealed SMC algorithm with adaptive inference.
-#'
-#' @param model likelihood model, including " " ...
+#' @description Perform annealed SMC algorithm for the multidimensional scaling problem with an incremental data dimension. Various models can be implemented.
+#' @title run ASMC for MDS with an incremental dimension
+#' @param model  likelihood model and hyperparameters
 #' @param dist.mat      distance matrix
-#' @param tuningparList  SMC tuning parameters
-#' @param n.core         the number of cores
+#' @param tuningparList  ASMC tuning parameters
+#' @param n.core         number of cores
 #' @param prev.result    results from the previous ASMC
-#' @param metric         distance metric used in the model
+#' @param metric         distance metric
 #' @return results of weighted particles, marginal likelihood estimates
-#' @examples
 #' print(" ")
 #' @export
 
 
-ASMC_incr <- function(model, dist.mat, tuningparList, n.core, prev.result, metric){
+ASMC_incr <- function(model, dist.mat, tuningparList, n.core, 
+                      prev.result, metric){
 
   n <- nrow(dist.mat)
   K <- tuningparList$K

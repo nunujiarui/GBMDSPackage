@@ -1,20 +1,21 @@
-#' This script contains the main function to perform annealed SMC algorithm.
-#'
-#' @param model  likelihood model, including " " ...
-#' @param hyperparList  hyper parameters
+#' @title run ASMC for MDS with a fixed dimension using integration of R and C++ to boost computing performance
+#' @param model  likelihood model and hyperparameters
 #' @param dist.mat      distance matrix
 #' @param tuningparList  SMC tuning parameters
 #' @param n.core         the number of cores
 #' @param cmds.result    results from the classical MDS
 #' @param metric         distance metric used in the model
-#' @param delta.mat  delta matrix
+#' @param upper_bound    upper bound in modeling the dissimilarity
+#' @param n.update       number of parameters to be updated in each ASMC iteration
+#' @param n.update.x     number of observations to be updated in each ASMC iteration
 #' @return results of weighted particles, marginal likelihood estimates
 #' @examples
 #' print(" ")
 #' @export
 
 ASMC_Rcpp <- function(model, dist.mat, tuningparList, n.core, 
-                      cmds.result, metric, upper_bound, n.update, n.update.x){
+                      cmds.result, metric, upper_bound, 
+                      n.update, n.update.x){
 
   # register the number of cores to use for parallel execution
   registerDoMC(n.core)

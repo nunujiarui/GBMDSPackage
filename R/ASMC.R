@@ -1,12 +1,12 @@
 #' @name ASMC
-#' @description Perform annealed SMC algorithm for the multidimensional scaling problem with a fixed data dimension
+#' @description Perform annealed SMC algorithm for the multidimensional scaling problem with a fixed data dimension. Various models can be implemented.
 #' @title run ASMC for MDS with a fixed dimension
-#' @param model  likelihood model, hyperparameters, and dimension
+#' @param model  likelihood model and hyperparameters
 #' @param dist.mat      distance matrix
 #' @param tuningparList  ASMC tuning parameters
 #' @param n.core         number of cores
 #' @param cmds.result    results from the classical MDS
-#' @param metric         distance metric used in the model
+#' @param metric         distance metric
 #' @return results of weighted particles, marginal likelihood estimates
 #' print(" ")
 #' @export
