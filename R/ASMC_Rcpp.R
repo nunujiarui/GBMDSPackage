@@ -12,7 +12,6 @@
 #' @examples
 #' print(" ")
 #' @export
-#' 
 
 ASMC_Rcpp <- function(model, dist.mat, tuningparList, n.core, 
                       cmds.result, metric, upper_bound, n.update, n.update.x){

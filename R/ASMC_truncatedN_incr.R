@@ -1,5 +1,4 @@
 
-
 truncatedN_incr <- function(hyperparList, p=2, reference.x.sd){
   bmdsmodel <- list()
   bmdsmodel$hyperparList <- hyperparList
@@ -9,7 +8,6 @@ truncatedN_incr <- function(hyperparList, p=2, reference.x.sd){
   class(bmdsmodel) <- append(class(bmdsmodel), c("truncatedN_incr", "BMDSModel"))
   return(bmdsmodel)
 }
-
 
 
 prior <- function(model) UseMethod("prior", model)
@@ -48,7 +46,6 @@ prior.truncatedN_incr <- function(model){
   return(output)
 
 }
-
 
 initialFun <- function(model, ...) UseMethod("initialFun", model)
 
@@ -90,7 +87,6 @@ initialFun.truncatedN_incr <- function(model, prev.result, dist.mat, metric){
   return(output)
 
 }
-
 
 
 proposalFun <- function(model,...) UseMethod("proposalFun", model)
@@ -210,7 +206,6 @@ proposalFun.truncatedN_incr <- function(model, currentVal, n, dist.mat,
 }
 
 
-
 dproposalFun <- function(model,...) UseMethod("dproposalFun", model)
 
 dproposalFun.truncatedN_incr <- function(model, n, dist.mat,
@@ -303,7 +298,6 @@ dproposalFun.truncatedN_incr <- function(model, n, dist.mat,
   return(output)
 
 }
-
 
 
 likelihoodFun <- function(model, ...) UseMethod("likelihoodFun", model)

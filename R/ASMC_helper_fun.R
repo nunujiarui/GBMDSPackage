@@ -5,7 +5,6 @@
 #' @return the stress value
 #' @examples
 #' print("TODO: add an example")
-#' @export
 stressFun <- function(d.mat, delta.mat){
 
   d.mat[!lower.tri(d.mat)] <- 0

@@ -12,7 +12,6 @@
 #' @return a 2D scatterplot of points with labels
 #' @examples
 #' print("TODO: add an example")
-#' @export
 plot.CMDS <- function(cmds.result, data.label,
                       plot.title = "",
                       rotate = FALSE, rotate.angle = NULL,
