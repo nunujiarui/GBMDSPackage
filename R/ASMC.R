@@ -1,19 +1,18 @@
-#' This script contains the main function to perform annealed SMC algorithm.
-#'
-#' @param model  likelihood model, including " " ...
-#' @param hyperparList  hyper parameters
+#' @name ASMC
+#' @description Perform annealed SMC algorithm for the multidimensional scaling problem with a fixed data dimension
+#' @title run ASMC for MDS with a fixed dimension
+#' @param model  likelihood model, hyperparameters, and dimension
 #' @param dist.mat      distance matrix
-#' @param tuningparList  SMC tuning parameters
-#' @param n.core         the number of cores
+#' @param tuningparList  ASMC tuning parameters
+#' @param n.core         number of cores
 #' @param cmds.result    results from the classical MDS
 #' @param metric         distance metric used in the model
-#' @param delta.mat  delta matrix
 #' @return results of weighted particles, marginal likelihood estimates
-#' @examples
 #' print(" ")
 #' @export
 
-ASMC <- function(model,  dist.mat, tuningparList, n.core, cmds.result, metric){
+ASMC <- function(model, dist.mat, tuningparList, n.core, 
+                 cmds.result, metric){
 
   if( n.core > 1 )  cl = parallel::makeCluster(n.core, type="FORK", setup_timeout = 0.5)
   
