@@ -113,11 +113,11 @@ proposalFun.truncatedN_incr <- function(model, currentVal, n, dist.mat,
 
   # calculate delta matrix and d matrix
   d.mat <- as.matrix(dist.mat)
-  if (dist.metric[dist.metric.index] == "cosine"){
-    delta.mat <- 1-philentropy::distance(x.cur, method = dist.metric[dist.metric.index], mute.message = TRUE)
+  if (dist.metric == "cosine"){
+    delta.mat <- 1-philentropy::distance(x.cur, method = dist.metric, mute.message = TRUE)
     colnames(delta.mat) =  rownames(delta.mat) <- rownames(d.mat)
   } else{
-    delta.mat <- philentropy::distance(x.cur, method = dist.metric[dist.metric.index], mute.message = TRUE)
+    delta.mat <- philentropy::distance(x.cur, method = dist.metric, mute.message = TRUE)
     colnames(delta.mat) =  rownames(delta.mat) <- rownames(d.mat)
   }
 
@@ -233,15 +233,15 @@ dproposalFun.truncatedN_incr <- function(model, n, dist.mat,
   # calculate delta matrix and d matrix
   d.mat.l <- dist.mat
   d.mat.r <- dist.mat
-  if (dist.metric[dist.metric.index] == "cosine"){
-    delta.mat.l <- 1-philentropy::distance(x.l, method = dist.metric[dist.metric.index], mute.message = TRUE)
+  if (dist.metric == "cosine"){
+    delta.mat.l <- 1-philentropy::distance(x.l, method = dist.metric, mute.message = TRUE)
     colnames(delta.mat.l) =  rownames(delta.mat.l) <- rownames(d.mat.l)
-    delta.mat.r <- 1-philentropy::distance(x.r, method = dist.metric[dist.metric.index], mute.message = TRUE)
+    delta.mat.r <- 1-philentropy::distance(x.r, method = dist.metric, mute.message = TRUE)
     colnames(delta.mat.r) =  rownames(delta.mat.r) <- rownames(d.mat.r)
   } else{
-    delta.mat.l <- philentropy::distance(x.l, method = dist.metric[dist.metric.index], mute.message = TRUE)
+    delta.mat.l <- philentropy::distance(x.l, method = dist.metric, mute.message = TRUE)
     colnames(delta.mat.l) =  rownames(delta.mat.l) <- rownames(d.mat.l)
-    delta.mat.r <- philentropy::distance(x.r, method = dist.metric[dist.metric.index], mute.message = TRUE)
+    delta.mat.r <- philentropy::distance(x.r, method = dist.metric, mute.message = TRUE)
     colnames(delta.mat.r) =  rownames(delta.mat.r) <- rownames(d.mat.r)
   }
 
@@ -329,11 +329,11 @@ likelihoodFun.truncatedN_incr <- function(model, dist.mat, proposal.result, metr
 
   # calculate delta matrix and d matrix
   d.mat <- dist.mat
-  if (dist.metric[dist.metric.index] == "cosine"){
-    delta.mat <- 1-philentropy::distance(x.mat, method = dist.metric[dist.metric.index], mute.message = TRUE)
+  if (dist.metric == "cosine"){
+    delta.mat <- 1-philentropy::distance(x.mat, method = dist.metric, mute.message = TRUE)
     colnames(delta.mat) =  rownames(delta.mat) <- rownames(d.mat)
   } else{
-    delta.mat <- philentropy::distance(x.mat, method = dist.metric[dist.metric.index], mute.message = TRUE)
+    delta.mat <- philentropy::distance(x.mat, method = dist.metric, mute.message = TRUE)
     colnames(delta.mat) =  rownames(delta.mat) <- rownames(d.mat)
   }
 
