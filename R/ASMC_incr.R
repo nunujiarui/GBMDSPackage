@@ -249,7 +249,7 @@ ASMC_incr <- function(model, dist.mat, tuningparList, n.core,
 
   }
 
-  #stopCluster(cl)
+  stopCluster(cl)
 
   ## Set the name for the class
   class(output.list) <- append(class(output.list),"BMDSParticles_incr")
