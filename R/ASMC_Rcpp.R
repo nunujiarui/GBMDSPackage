@@ -17,8 +17,10 @@ ASMC_Rcpp <- function(model, dist.mat, tuningparList, n.core,
                       cmds.result, metric, upper_bound, 
                       n.update, n.update.x){
 
-  # register the number of cores to use for parallel execution
-  registerDoMC(n.core)
+  if (n.core > 1){
+    # register the number of cores to use for parallel execution
+    registerDoMC(n.core)
+  }
   
   n <- nrow(dist.mat)
   K <- tuningparList$K
