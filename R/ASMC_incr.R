@@ -14,6 +14,8 @@
 ASMC_incr <- function(model, dist.mat, tuningparList, n.core, 
                       prev.result, metric){
 
+  if( n.core > 1 )  cl = parallel::makeCluster(n.core, type="FORK", setup_timeout = 0.5)
+  
   n <- nrow(dist.mat)
   K <- tuningparList$K
 
@@ -72,9 +74,6 @@ ASMC_incr <- function(model, dist.mat, tuningparList, n.core,
   W <- rep(1/K, K)
   logW <- log(W)
 
-  if( n.core > 1 )  cl = makeCluster(n.core, type="FORK")
-  #if( n.core > 1 )  clusterExport(cl, varlist = ls(), envir = environment())
-
   ### Annealed SMC
   while (tau[r] < 1) {
 
@@ -99,8 +98,6 @@ ASMC_incr <- function(model, dist.mat, tuningparList, n.core,
       lik.result <- likelihoodFun(model,  dist.mat, proposal.result = previousVal, metric, n.incr)
       xi.list <- lapply(seq_len(nrow(xi[[k]])), function(i) xi[[k]][i,])
       xi.prev.list <- xi.list[1:(n-n.incr)]
-      #lambda.list <- rep(list(lambda[[k]]), n)
-      #prior.d.x <- mapply(mvtnorm::dmvnorm, xi.list, x.mean.list, lambda.list, log = TRUE)
       reference.mean.k <- lapply(seq_len(nrow(reference.mean[[k]])), function(i) reference.mean[[k]][i,])[1:(n-n.incr)]
       ref.d.x <- mapply(mvtnorm::dmvnorm, xi.prev.list, reference.mean.k, rep(list(reference.x.sd), n-n.incr), log = TRUE)
       logPriorRef <- sum(ref.d.x)
