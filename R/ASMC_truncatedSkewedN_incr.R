@@ -423,7 +423,7 @@ likelihoodFun.truncatedSkewedN_incr <- function(model, dist.mat, proposal.result
   # psi.logprior <- dunif(psi, min = c, max = d, log = TRUE)
   #
   # logprior <- sum(x.logprior)  + sigma2.logprior + sum(diag(lambda.logprior)) + psi.logprior
-  logprior <- x.logprior
+  logprior <- sum(x.logprior)
 
   # calculate log posterior
   # As the sum of the log-likelihood and the log-prior.
