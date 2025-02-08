@@ -2,7 +2,7 @@ export(ASMC)
 export(ASMC_Rcpp)
 export(ASMC_incr)
 export(ASMC_incr_Rcpp)
-useDynLib(mypackage)
+useDynLib(GBMDSpackage)
 exportPattern("ˆ[[:alpha:]]+")
 importFrom(Rcpp, evalCpp)
 
