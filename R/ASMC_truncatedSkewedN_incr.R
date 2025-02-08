@@ -126,7 +126,7 @@ proposalFun.truncatedSkewedN_incr <- function(model, currentVal, n, dist.mat,
   beta <- hyperparList$beta
   c <- hyperparList$c
   d <- hyperparList$d
-  constant.multiple <- hyperparList$constant.multiple
+  constant.multiple <- hyperparList$constant_multiple
 
   # Get current values
   x.cur <- currentVal$x
@@ -256,7 +256,7 @@ dproposalFun.truncatedSkewedN_incr <- function(model, n, dist.mat,
   beta <- hyperparList$beta
   c <- hyperparList$c
   d <- hyperparList$d
-  constant.multiple <- hyperparList$constant.multiple
+  constant.multiple <- hyperparList$constant_multiple
 
   # Get parameter values
   x.l <- para.result.l$x

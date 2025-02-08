@@ -124,7 +124,7 @@ proposalFun.truncatedT_incr <- function(model, currentVal, n, dist.mat,
   alpha <- hyperparList$alpha
   beta <- hyperparList$beta
   df.nu <- hyperparList$df
-  constant.multiple <- hyperparList$constant.multiple
+  constant.multiple <- hyperparList$constant_multiple
 
   # Get current values
   x.cur <- currentVal$x
@@ -263,7 +263,7 @@ dproposalFun.truncatedT_incr <- function(model, n, dist.mat,
   alpha <- hyperparList$alpha
   beta <- hyperparList$beta
   df.nu <- hyperparList$df
-  constant.multiple <- hyperparList$constant.multiple
+  constant.multiple <- hyperparList$constant_multiple
 
   # Get parameter values
   x.l <- para.result.l$x

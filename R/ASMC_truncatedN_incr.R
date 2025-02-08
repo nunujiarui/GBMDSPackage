@@ -103,7 +103,7 @@ proposalFun.truncatedN_incr <- function(model, currentVal, n, dist.mat,
   b <- hyperparList$b
   alpha <- hyperparList$alpha
   beta <- hyperparList$beta
-  constant.multiple <- hyperparList$constant.multiple
+  constant.multiple <- hyperparList$constant_multiple
 
   # Get current values
   x.cur <- currentVal$x
@@ -220,7 +220,7 @@ dproposalFun.truncatedN_incr <- function(model, n, dist.mat,
   b <- hyperparList$b
   alpha <- hyperparList$alpha
   beta <- hyperparList$beta
-  constant.multiple <- hyperparList$constant.multiple
+  constant.multiple <- hyperparList$constant_multiple
 
   # Get parameter values
   x.l <- para.result.l$x
