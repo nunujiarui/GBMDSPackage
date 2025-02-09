@@ -4,5 +4,5 @@ export(ASMC_incr)
 export(ASMC_incr_Rcpp)
 exportPattern("^[[:alpha:]]+")
 importFrom(Rcpp,evalCpp)
-useDynLib(bayMDS)
+useDynLib(GBMDSpackage)
 
