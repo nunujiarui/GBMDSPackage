@@ -510,5 +510,5 @@ static const R_CallMethodDef CallEntries[] = {
 
 RcppExport void R_init_GBMDSpackage(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
-    R_useDynamicSymbols(dll, FALSE);
+    R_useDynamicSymbols(dll, false);
 }
