@@ -341,6 +341,7 @@ ASMC_Rcpp <- function(model, dist.mat, tuningparList, n.core,
 
   }
 
+
   ## Set the name for the class
   class(output.list) <- append(class(output.list),"BMDSParticles")
   return(output.list)

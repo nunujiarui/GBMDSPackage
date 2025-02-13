@@ -86,11 +86,11 @@ ASMC_incr_Rcpp <- function(model, dist.mat, tuningparList, n.core,
     }
   } else{
     if (any(class(model) %in% c("truncatedN_incr"))){
-      theta <- lapply(1:K, function(i){initialFun_cpp(cmds.result, dist.mat, metric, hyperparList)})
+      theta <- lapply(1:K, function(i){initialFun_incr_cpp(prev.result, dist.mat, metric, hyperparList)})
     } else if (any(class(model) %in% c("truncatedT_incr"))){
-      theta <- lapply(1:K, function(i){initialFun_T_cpp(cmds.result, dist.mat, metric, hyperparList)})
+      theta <- lapply(1:K, function(i){initialFun_T_incr_cpp(prev.result, dist.mat, metric, hyperparList)})
     } else if (any(class(model) %in% c("truncatedSkewedN_incr"))){
-      theta <- lapply(1:K, function(i){initialFun_SN_cpp(cmds.result, dist.mat, metric, hyperparList)})
+      theta <- lapply(1:K, function(i){initialFun_SN_incr_cpp(prev.result, dist.mat, metric, hyperparList)})
     }
     #theta <- lapply(1:K, function(i){initialFun_cpp(cmds.result, dist.mat, metric, hyperparList)})
     xi <- lapply(1:K, function(k){theta[[k]]$x})
@@ -344,6 +344,7 @@ ASMC_incr_Rcpp <- function(model, dist.mat, tuningparList, n.core,
     }
 
   }
+  
 
   ## Set the name for the class
   class(output.list) <- append(class(output.list),"BMDSParticles_incr")
